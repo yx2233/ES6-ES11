@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			div{
+				width:200px;
+				height:200px;
+				background:#58a;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="ad"></div>
+		<script>
+			// 1.点击div,2s之后变为粉色
+			let ad = document.getElementById('ad');
+			// 普通函数的写法
+			// ad.addEventListener("click",function(){
+			// 	// console.log(this);//此时的this指向ad
+			// 	let _this = this;
+			// 	setTimeout(function(){
+			// 		// console.log(this);//这时的this指向window
+			// 		_this.style.background = 'pink';
+			// 	},2000)
+			// })
+			// 箭头函数的写法
+			ad.addEventListener('click',function(){
+			// ad.addEventListener('click',()=>{  
+			// 如果这个也写成箭头函数的话，this就永远指向window
+				// console.log(this);//此时的this指向ad
+				setTimeout(() => {
+					// console.log(this);
+					this.style.background = 'pink';
+				},2000)
+			})
+			
+			
+			// 2.从数组中返回偶数的元素
+			const arr = [2,3,5,7,30,20];
+			// 普通函数的写法
+			// const even = arr.filter(function(item){
+			// 	if(item % 2===0){
+			// 		return true
+			// 	}else{
+			// 		return false
+			// 	}
+			// })
+			// console.log(even);
+			// 箭头函数的写法
+			// const even = arr.filter(item =>{
+			// 	if(item % 2===0){
+			// 		return true
+			// 	}else{
+			// 		return false
+			// 	}
+			// })
+			// console.log(even);
+			// 箭头函数的简写
+			const even = arr.filter(item => item % 2 ===0);
+			console.log(even);
+		</script>
+	</body>
+</html>

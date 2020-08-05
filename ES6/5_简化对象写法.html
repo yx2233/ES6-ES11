@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>简化对象写法</title>
+	</head>
+	<body>
+		<script>
+			// ES6允许在大括号里，直接写入变量和函数，作为对象的属性和写法
+			let name = '王一博';
+			let change = function(){
+				console.log("我喜欢王一博");
+			}
+			let school = {
+				name,   //等同于name:name
+				change, //等同于change:change
+				improve(){  //等同于 improve:function(){}
+					console.log("喜欢王一博，会让我更想变得优秀");
+				}
+			}
+		</script>
+	</body>
+</html>

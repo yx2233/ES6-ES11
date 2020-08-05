@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>const 定义常量</title>
+	</head>
+	<body>
+		<!-- 常量：值不能修改的量 -->
+		<script>
+			// 声明常量
+			const SCHOOL = "啦啦啦";
+			console.log(SCHOOL);
+			
+			// 1.一定要赋初始值
+			// const A;
+			
+			// 2.一般常量使用大写（潜规则），也可使用小写
+			const a = 100;
+			
+			// 3.常量的值不能做修改
+			// SCHOOL = 'AGKJSJD';
+			
+			// 4.块级作用域
+			{
+				const B = 200;
+			}
+			// console.log(B);
+			
+			// 5.对数组和对象的修改，不算对常量进行修改
+			const TEAM = ['asd', 'dddfds', 'sgj'];
+			TEAM.push('SHGDJG');
+			console.log(TEAM);
+			
+			// 6.不存在变量提升
+			// console.log(AD);
+			const AD = "12344";
+		</script>
+	</body>
+</html>
